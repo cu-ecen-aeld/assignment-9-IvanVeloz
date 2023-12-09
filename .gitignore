@@ -2,5 +2,3 @@
 build/
 .vscode/
 *.log
-base_external/configs/aesd_qemu_defconfig
-clean.sh
