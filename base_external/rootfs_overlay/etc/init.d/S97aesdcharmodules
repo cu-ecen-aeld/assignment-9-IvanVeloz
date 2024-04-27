@@ -4,16 +4,12 @@ cd /lib/modules/$(uname -r)/extra
 
 case "$1" in
   start)
-    echo "Loading misc-modules and scull drivers"
-    module_load faulty
-    modprobe hello
-    scull_load
+    echo "Loading aesd-char driver"
+    aesdchar_load
     ;;
   stop)
-    echo "Unloading misc-modules and scull drivers"
-    scull_unload
-    rmmod hello
-    module_unload faulty
+    echo "Unloading aesd-char driver"
+    aesdchar_unload
     ;;
   *)
     echo "Usage: $0 {start | stop}"
